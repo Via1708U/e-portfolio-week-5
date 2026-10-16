@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var t = localStorage.getItem("theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    })();
+  </script>
+  <title>Resume — Silvia YU</title>
+  <meta name="description" content="Silvia YU's resume — content strategist, new media operator, and visual communicator with a background in applied psychology and digital education." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%234f76c2'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>S</text></svg>" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">S</span>
+        Silvia YU
+      </a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 6.34-1.41 1.41"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <span class="eyebrow">My journey so far</span>
+        <h1>Resume</h1>
+        <p>A summary of where I've worked, what I've studied, and the tools I reach for every day.</p>
+      </div>
+    </section>
+
+    <!-- 1. Summary -->
+    <section class="section" id="summary" style="padding-top:2rem; padding-bottom:0;">
+      <div class="container">
+        <div class="section-head reveal" style="margin-bottom:1.2rem;">
+          <span class="eyebrow">Who I am</span>
+          <h2>Summary</h2>
+        </div>
+        <div class="resume-summary reveal">
+          <p>Silvia YU is a content strategist, new media operator, and visual communicator with an interdisciplinary background in applied psychology and digital education. Her work sits at the intersection of psychology, digital experiences, and technology — spanning content planning, bilingual editing, social media operations, visual design, UI/UX, user research, and project coordination across higher education, mental health, wellbeing, and digital-product contexts. She enjoys moving between research and making: understanding people, structuring information, designing experiences, and turning ideas into something tangible — whether that means building an interactive learning activity, shaping a wellbeing product, or creating communication materials that connect human needs with thoughtful digital solutions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Experience -->
+    <section class="section" id="experience" style="padding-top:2.5rem;">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Where I've worked</span>
+          <h2>Experience</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="when">Mar 2026 – Present</span>
+            <h3>Smoothing</h3>
+            <p class="org">Head of Operations · Shenzhen Tietie Health Technology Co., Ltd.</p>
+            <p class="tl-intro">A psychology-informed digital wellbeing startup exploring more engaging approaches to mindfulness and emotional health.</p>
+            <strong class="tl-label">What I do</strong>
+            <ul>
+              <li>Lead startup operations across entrepreneurship competitions, incubator applications, business planning, and pitch development.</li>
+              <li>Design product experiences and visual interfaces for the Smoothing mini-program, including its identity, homepage, task system, and interactive mindfulness games.</li>
+              <li>Use an AI-assisted design workflow combining prompt design, rapid prototyping, manual review, and iterative refinement.</li>
+              <li>Support early-stage user testing and translate behavioural feedback into product improvements.</li>
+            </ul>
+            <strong class="tl-label">Selected outcomes</strong>
+            <ul>
+              <li>Advanced to the BNBU final of the 2026 Fuchong Cup / China International College Students' Innovation Competition.</li>
+              <li>Secured admission to the BNBU Maker Centre.</li>
+              <li>Early prototype testing identified embodied interaction as a key product appeal and generated actionable insights for interaction refinement.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item reveal">
+            <span class="when">Sep 2025 – Jun 2026</span>
+            <h3>Centre for Teaching and Learning</h3>
+            <p class="org">Intern · Beijing Normal-Hong Kong Baptist University</p>
+            <p class="tl-intro">Worked across digital communication, editorial design, and faculty-development initiatives, translating academic and institutional information into clear and engaging content.</p>
+            <strong class="tl-label">What I did</strong>
+            <ul>
+              <li>Planned and produced teaching-development posters, WeChat articles, news releases, photography, and event materials.</li>
+              <li>Published 70+ updates across university communication channels.</li>
+              <li>Developed reusable content structures and design templates that reduced production and revision time from approximately one day to two hours per article.</li>
+              <li>Produced bilingual Chinese-English content and supported communications for faculty-development activities involving 200+ participants.</li>
+            </ul>
+            <p class="tl-focus"><strong>Focus</strong> · Content Design · Editorial Design · Visual Communication · Workflow Design · Bilingual Communication</p>
+          </article>
+
+          <article class="timeline-item reveal">
+            <span class="when">Sep 2024 – Jun 2026</span>
+            <h3>Personal Growth and Counseling Center</h3>
+            <p class="org">Intern &amp; Peer Counsellor · Beijing Normal-Hong Kong Baptist University</p>
+            <p class="tl-intro">Combined psychology, peer support, mental-health communication, programme delivery, and visual storytelling within a professionally supervised university counselling environment.</p>
+            <strong class="tl-label">What I did</strong>
+            <ul>
+              <li>Provided supervised peer-counselling support using active listening, empathy, and supportive communication.</li>
+              <li>Co-led five university-wide mental-health initiatives reaching 2,000+ participant visits.</li>
+              <li>Researched, wrote, and designed original mental-health articles from topic development through final publication.</li>
+              <li>Conducted research, interviews, copywriting, and full-layout design for mental-health educational materials including the <em>Youth Loss Counselling Guide</em> and <em>Treasure Hunt at PGCC</em>.</li>
+            </ul>
+            <p class="tl-focus"><strong>Focus</strong> · Mental Health · Psychology Communication · Programme Design · Editorial Design · Peer Support</p>
+          </article>
+
+          <article class="timeline-item reveal">
+            <span class="when">Feb 2026 – Jun 2026</span>
+            <h3>Emotional Intelligence</h3>
+            <p class="org">Teaching Assistant · Whole-Person Education Centre</p>
+            <p class="tl-intro">Designed psychology-based learning materials that combine evidence, instructional design, visual communication, and interactive technology.</p>
+            <strong class="tl-label">What I did</strong>
+            <ul>
+              <li>Conducted literature research and transformed psychology and wellbeing topics into structured course content.</li>
+              <li>Designed an interactive HTML flip-card learning experience for emotional-intelligence concepts.</li>
+              <li>Researched and developed an evidence-based teaching deck on addiction.</li>
+              <li>Built a content-development workflow combining research, instructional design, AI-assisted generation, manual verification, and iterative refinement.</li>
+              <li>Independently delivered five completed learning assets.</li>
+            </ul>
+            <p class="tl-focus"><strong>Focus</strong> · Learning Experience Design · Psychology · Educational Technology · AI-assisted Creation · Research</p>
+          </article>
+
+          <article class="timeline-item reveal">
+            <span class="when">Feb 2026 – Present</span>
+            <h3>Student Health Promotion Leadership Programme</h3>
+            <p class="org">Project Assistant · Beijing Normal-Hong Kong Baptist University</p>
+            <p class="tl-intro">Support the design and delivery of a university health-promotion programme that helps student teams transform health-related ideas into structured projects.</p>
+            <strong class="tl-label">What I do</strong>
+            <ul>
+              <li>Support a programme serving 60+ students across eight teams and track the development of student-led project proposals.</li>
+              <li>Design activity workflows, project-report templates, production processes, and programme schedules.</li>
+              <li>Coordinate communication between students, technical teams, administrative staff, and external stakeholders.</li>
+              <li>Gather and translate requirements for a health Q&amp;A website.</li>
+              <li>Support collaboration aimed at expanding the programme to additional universities in Zhuhai.</li>
+            </ul>
+            <p class="tl-focus"><strong>Focus</strong> · Programme Operations · Project Management · Health Promotion · UX Requirements · Stakeholder Coordination</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Education -->
+    <section class="section section--soft" id="education">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Where I've studied</span>
+          <h2>
+            <svg class="edu-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            Education
+          </h2>
+        </div>
+        <div class="edu-entries">
+          <div class="edu-entry reveal">
+            <h3>Xi'an Jiaotong-Liverpool University (XJTLU)</h3>
+            <p class="edu-degree-line">Master of Science in Digital Education <span class="edu-sep">|</span> Sep 2026 – Expected Jul 2028</p>
+            <p class="edu-note">Degree awarded by the University of Liverpool</p>
+            <ul>
+              <li>Master's Entrance Scholarship</li>
+              <li>Selected Coursework: Education in a Digital Society; Designing Digital Education Curriculum; Integrating STEAM in the 21st Century Classroom</li>
+            </ul>
+          </div>
+
+          <div class="edu-entry reveal">
+            <h3>Beijing Normal-Hong Kong Baptist University (BNBU)</h3>
+            <p class="edu-degree-line">Bachelor of Science (Honours) in Applied Psychology <span class="edu-sep">|</span> Sep 2022 – Jun 2026</p>
+            <p class="edu-note">Degree awarded by Hong Kong Baptist University</p>
+            <ul>
+              <li>GPA: 3.85/4.00 <span class="edu-sep">|</span> Programme Rank: 3/108 (Top 3%)</li>
+              <li>First-Class Academic Scholarship, 2022, 2023, and 2024 academic years</li>
+              <li>Selected Coursework: Research Methods in Psychology; Experimental Psychology; Educational Psychology; Counselling Psychology; Industrial and Organisational Psychology; Consumer Psychology</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What I bring</span>
+          <h2>Skills</h2>
+          <p>The tools and practices I reach for across content, design, research, and everything in between.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              Languages
+            </h3>
+            <div class="tag-cloud">
+              <span class="tag">Chinese (native)</span>
+              <span class="tag">English (professional)</span>
+              <span class="tag">Full-text Chinese-English translation</span>
+              <span class="tag">English proofreading</span>
+              <span class="tag">Subtitle preparation</span>
+              <span class="tag">Bilingual communication materials</span>
+            </div>
+          </div>
+
+          <div class="skill-card skill-card--accent reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+              Tools / Technologies
+            </h3>
+            <span class="skill-sub">Platforms</span>
+            <div class="tag-cloud">
+              <span class="tag">WeChat Official Account</span>
+              <span class="tag">WeChat Channels</span>
+              <span class="tag">Bilibili</span>
+            </div>
+            <span class="skill-sub">Design &amp; Media</span>
+            <div class="tag-cloud">
+              <span class="tag">Adobe Premiere Pro</span>
+              <span class="tag">CapCut</span>
+              <span class="tag">Canva</span>
+              <span class="tag">Photography</span>
+            </div>
+            <span class="skill-sub">Web &amp; Interactive</span>
+            <div class="tag-cloud">
+              <span class="tag">H5</span>
+              <span class="tag">Interactive HTML tools</span>
+              <span class="tag">UI/UX</span>
+            </div>
+            <span class="skill-sub">AI Tools</span>
+            <div class="tag-cloud">
+              <span class="tag">Codex</span>
+              <span class="tag">Prompt design</span>
+              <span class="tag">AI-assisted UI and course-content generation</span>
+            </div>
+          </div>
+
+          <div class="skill-card skill-card--sage reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              Soft Skills
+            </h3>
+            <span class="skill-sub">Content &amp; Strategy</span>
+            <div class="tag-cloud">
+              <span class="tag">Content strategy</span>
+              <span class="tag">Copywriting</span>
+              <span class="tag">Editorial layout</span>
+              <span class="tag">Content review</span>
+              <span class="tag">Short-form video production</span>
+              <span class="tag">Podcast production</span>
+            </div>
+            <span class="skill-sub">Visual Design</span>
+            <div class="tag-cloud">
+              <span class="tag">Poster and banner design</span>
+              <span class="tag">Presentation design</span>
+            </div>
+            <span class="skill-sub">Quality &amp; Process</span>
+            <div class="tag-cloud">
+              <span class="tag">Manual verification</span>
+              <span class="tag">Iterative refinement</span>
+              <span class="tag">Quality control</span>
+            </div>
+            <span class="skill-sub">Project &amp; Leadership</span>
+            <div class="tag-cloud">
+              <span class="tag">Project management</span>
+              <span class="tag">Workflow and template design</span>
+              <span class="tag">Team leadership</span>
+              <span class="tag">Cross-functional coordination</span>
+              <span class="tag">Competition and incubator applications</span>
+              <span class="tag">Requirements gathering</span>
+              <span class="tag">Event delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="download-row reveal">
+          <a class="btn btn-primary" href="resume.pdf" download="Silvia-YU-Resume.pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download as PDF
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container fun-fact">
+      <span class="label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Fun fact about me
+      </span>
+      <p>I can turn a five-minute break into a two-hour rabbit hole, remember oddly specific details, and never say no to trying something delightfully random.</p>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Silvia YU · Made with warmth and lots of coffee.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

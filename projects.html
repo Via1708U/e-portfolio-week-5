@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var t = localStorage.getItem("theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    })();
+  </script>
+  <title>Projects — Silvia YU</title>
+  <meta name="description" content="Projects by Silvia YU — digital products, learning experiences, psychology-informed work, and visual communication." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%234f76c2'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>S</text></svg>" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">S</span>
+        Silvia YU
+      </a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 6.34-1.41 1.41"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <span class="eyebrow">Things I've made</span>
+        <h1>Projects</h1>
+        <p>A collection of digital products, learning experiences, psychology-informed projects, and visual communication work.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:1.5rem;">
+      <div class="container">
+        <div class="filter-bar reveal" role="group" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="digital-products" aria-pressed="false">Digital Products</button>
+          <button class="filter-btn" data-filter="learning-education" aria-pressed="false">Learning &amp; Education</button>
+          <button class="filter-btn" data-filter="psychology-wellbeing" aria-pressed="false">Psychology &amp; Wellbeing</button>
+          <button class="filter-btn" data-filter="visual-communication" aria-pressed="false">Visual Communication</button>
+        </div>
+
+        <!--
+          Project cards are rendered by JavaScript from the PROJECTS data
+          array in js/main.js — edit that array to add, remove, or update
+          projects (title, description, tags, categories, thumbnail, link).
+        -->
+        <div class="projects-grid" id="projects-grid"></div>
+
+        <!-- Mini project: Weather Lookup -->
+        <div class="todo-app reveal" id="weather-app">
+          <header class="todo-head">
+            <span class="todo-badge">Mini project</span>
+            <h2>Weather Lookup</h2>
+            <p>Type a city name and find out how it's feeling right now.</p>
+          </header>
+
+          <form class="weather-form" id="weather-form" autocomplete="off">
+            <div class="weather-input-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="weather-search-icon" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="weather-city" name="city" maxlength="40" placeholder="e.g. Beijing, Shanghai, 苏州, London" required aria-autocomplete="list" aria-controls="weather-suggestions" aria-expanded="false" />
+              <div class="weather-suggestions" id="weather-suggestions" role="listbox" hidden></div>
+            </div>
+            <button type="submit" class="btn btn-primary weather-search-btn" id="weather-search-btn">Search</button>
+          </form>
+
+          <div class="weather-result" id="weather-result" hidden>
+            <!-- Populated by main.js -->
+          </div>
+
+          <div class="weather-error" id="weather-error" hidden></div>
+        </div>
+
+        <!-- Mini project: interactive Task Planner -->
+        <div class="todo-app reveal" id="todo-app">
+          <header class="todo-head">
+            <span class="todo-badge">Mini project</span>
+            <h2>Task Planner</h2>
+            <p>Write the task, pick a date, choose an emoji and how important it is, then press <strong>Add</strong>.</p>
+          </header>
+
+          <!-- Cloud sync status (updated by main.js) -->
+          <div class="sync-status" id="sync-status" role="status" aria-live="polite">
+            <span class="sync-dot" aria-hidden="true"></span>
+            <span class="sync-text">Connecting…</span>
+          </div>
+
+          <form class="todo-form" id="todo-form" autocomplete="off">
+            <div class="todo-field">
+              <label for="todo-input">Task</label>
+              <input type="text" id="todo-input" name="task" maxlength="140"
+                     placeholder="e.g. Finish project proposal" required />
+            </div>
+
+            <div class="todo-row">
+              <div class="todo-field">
+                <label for="todo-date">Date</label>
+                <input type="date" id="todo-date" name="date" required />
+              </div>
+              <div class="todo-field">
+                <span class="todo-picker-label" id="priority-label">Importance</span>
+                <div class="priority-picker" role="radiogroup" aria-labelledby="priority-label">
+                  <button type="button" class="priority-btn" data-priority="low" role="radio" aria-checked="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                    Low
+                  </button>
+                  <button type="button" class="priority-btn" data-priority="medium" role="radio" aria-checked="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                    Medium
+                  </button>
+                  <button type="button" class="priority-btn" data-priority="high" role="radio" aria-checked="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                    High
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="todo-field">
+              <span class="todo-picker-label" id="emoji-label">Emoji <span class="todo-optional">(optional)</span></span>
+              <div class="emoji-picker" role="group" aria-labelledby="emoji-label">
+                <button type="button" class="emoji-btn" data-emoji="📌" aria-pressed="false">📌</button>
+                <button type="button" class="emoji-btn" data-emoji="📝" aria-pressed="false">📝</button>
+                <button type="button" class="emoji-btn" data-emoji="📚" aria-pressed="false">📚</button>
+                <button type="button" class="emoji-btn" data-emoji="💡" aria-pressed="false">💡</button>
+                <button type="button" class="emoji-btn" data-emoji="🎯" aria-pressed="false">🎯</button>
+                <button type="button" class="emoji-btn" data-emoji="🏃" aria-pressed="false">🏃</button>
+                <button type="button" class="emoji-btn" data-emoji="🛒" aria-pressed="false">🛒</button>
+                <button type="button" class="emoji-btn" data-emoji="💼" aria-pressed="false">💼</button>
+                <button type="button" class="emoji-btn" data-emoji="🎨" aria-pressed="false">🎨</button>
+                <button type="button" class="emoji-btn" data-emoji="🧠" aria-pressed="false">🧠</button>
+                <button type="button" class="emoji-btn" data-emoji="🌱" aria-pressed="false">🌱</button>
+                <button type="button" class="emoji-btn" data-emoji="🏥" aria-pressed="false">🏥</button>
+                <button type="button" class="emoji-btn" data-emoji="✨" aria-pressed="false">✨</button>
+                <button type="button" class="emoji-btn" data-emoji="🎉" aria-pressed="false">🎉</button>
+                <button type="button" class="emoji-btn" data-emoji="🐱" aria-pressed="false">🐱</button>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary todo-add" id="todo-add-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              <span class="todo-add-label">Add</span>
+            </button>
+          </form>
+
+          <div class="todo-meta">
+            <span class="todo-count" id="todo-count" aria-live="polite">Loading…</span>
+            <button type="button" class="todo-clear" id="todo-clear" hidden>Clear completed</button>
+          </div>
+
+          <ul class="todo-list" id="todo-list">
+            <!-- Skeleton rows shown during the initial fetch -->
+            <li class="todo-skeleton" aria-hidden="true"><span class="sk sk-check"></span><span class="sk sk-line"></span></li>
+            <li class="todo-skeleton" aria-hidden="true"><span class="sk sk-check"></span><span class="sk sk-line"></span></li>
+            <li class="todo-skeleton" aria-hidden="true"><span class="sk sk-check"></span><span class="sk sk-line"></span></li>
+          </ul>
+
+          <p class="todo-list-empty" id="todo-empty" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            Nothing on the list yet — add your first task above.
+          </p>
+        </div>
+
+        <!-- Mini project: World Time -->
+        <div class="todo-app reveal" id="world-time-app">
+          <header class="todo-head">
+            <span class="todo-badge">Mini project</span>
+            <h2>World Time</h2>
+            <p>Enter a city to see what time it is right now, anywhere in the world.</p>
+          </header>
+
+          <form class="world-time-form" id="world-time-form" autocomplete="off">
+            <div class="world-time-input-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="world-time-icon" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <input type="text" id="world-time-city" name="city" maxlength="40" placeholder="e.g. London, Tokyo, Sydney" required />
+            </div>
+            <button type="submit" class="btn btn-primary world-time-btn" id="world-time-search-btn">Search</button>
+          </form>
+
+          <div class="world-time-result" id="world-time-result" hidden>
+            <!-- Populated by main.js -->
+          </div>
+
+          <div class="world-time-error" id="world-time-error" hidden></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container fun-fact">
+      <span class="label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Fun fact about me
+      </span>
+      <p>I can turn a five-minute break into a two-hour rabbit hole, remember oddly specific details, and never say no to trying something delightfully random.</p>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Silvia YU · Made with warmth and lots of coffee.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

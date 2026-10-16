@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var t = localStorage.getItem("theme");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      if (t === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    })();
+  </script>
+  <title>Silvia YU — Designer, Developer, Friendly Human</title>
+  <meta name="description" content="The personal website of Silvia YU — a product designer and developer who loves reading, hiking, and really good coffee." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%234f76c2'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>S</text></svg>" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">S</span>
+        Silvia YU
+      </a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 6.34-1.41 1.41"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <h1><span class="wave">👋</span> Hi, I'm <span>Silvia YU</span></h1>
+          <p class="lead">
+            I am a content strategist, new media operator, and visual
+            communicator with an interdisciplinary background in applied
+            psychology and digital education. My experience spans content
+            planning, bilingual editing, social media operations, visual design,
+            UI/UX, user research, and project coordination across higher
+            education, mental health, wellbeing, and digital-product contexts.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="resume.html">
+              View My Resume
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-outline" href="contact.html">Say Hello</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal">
+          <img
+            src="assets/animated%20portfolio%20image.png"
+            alt="Illustration of Silvia YU resting her chin and smiling at her laptop"
+          />
+          <span class="hero-badge"><span class="dot"></span> Open to friendly chats</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Short introduction -->
+    <section class="section">
+      <div class="container">
+        <div class="intro-card reveal">
+          <div>
+            <span class="eyebrow">A little about me</span>
+            <h2>Psychology by training, curious builder by nature</h2>
+            <p style="margin-top:1rem;">
+              I'm interested in the space where psychology, digital experiences,
+              and technology come together. My work has taken me across mental
+              health, digital education, product operations, content design, and
+              AI-assisted creation — often translating complex ideas into
+              experiences that are easier to understand, use, and engage with.
+            </p>
+            <p>
+              I enjoy moving between research and making: understanding people,
+              structuring information, designing experiences, testing ideas, and
+              turning them into something tangible. Whether I'm building an
+              interactive learning activity, shaping a wellbeing product, or
+              creating communication materials, I'm most drawn to work that
+              connects human needs with thoughtful digital solutions.
+            </p>
+          </div>
+          <div class="intro-stats">
+            <div class="stat">
+              <span class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+              </span>
+              <div><strong>70+</strong><span>Published updates · content &amp; digital communication</span></div>
+            </div>
+            <div class="stat">
+              <span class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+              <div><strong>2,000+</strong><span>Participant visits · mental-health initiatives</span></div>
+            </div>
+            <div class="stat">
+              <span class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </span>
+              <div><strong>Psychology × Digital</strong><span>Research · Education · Product · AI</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three things I like -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Off the clock</span>
+          <h2>Three things I absolutely love</h2>
+          <p>Work is fun, but these keep me curious, grounded, and inspired.</p>
+        </div>
+        <div class="likes-grid">
+          <article class="like-card reveal">
+            <img
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Human%20mind%20and%20behaviour%20concept%2C%20people%20silhouettes%20connecting%20with%20speech%20bubbles%20and%20thought%20shapes%2C%20curiosity%20about%20emotions%2C%20flat%20modern%20illustration%2C%20cool%20blue%20and%20soft%20purple%20color%20palette&image_size=square"
+              alt="People connecting, surrounded by thought and speech bubbles"
+            />
+            <div class="like-body">
+              <h3>Understanding What Makes People Tick</h3>
+              <p>I love exploring human behaviour, emotions, and the small social details that shape how people think, connect, and make sense of their experiences.</p>
+            </div>
+          </article>
+          <article class="like-card reveal">
+            <img
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Hands%20crafting%20a%20paper%20collage%20with%20scissors%20glue%20fabric%20and%20colorful%20materials%20on%20a%20desk%2C%20creative%20handmade%20art%2C%20flat%20modern%20illustration%2C%20teal%20green%20and%20cool%20blue%20color%20palette&image_size=square"
+              alt="Hands arranging a handmade paper collage on a desk"
+            />
+            <div class="like-body">
+              <h3>Making Things With My Hands</h3>
+              <p>Crafting, collage, and visual experimentation help me slow down, play with ideas, and turn ordinary materials into something personal and expressive.</p>
+            </div>
+          </article>
+          <article class="like-card reveal">
+            <img
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Travel%20journal%20open%20on%20an%20illustrated%20city%20map%20with%20local%20food%20neighbourhood%20streets%20and%20a%20camera%2C%20discovering%20places%20through%20stories%2C%20flat%20modern%20illustration%2C%20cool%20blue%20teal%20green%20and%20soft%20purple%20palette&image_size=square"
+              alt="An open travel journal on an illustrated map of a neighbourhood"
+            />
+            <div class="like-body">
+              <h3>Discovering Places Through Their Stories</h3>
+              <p>I enjoy exploring new places, observing everyday life, and learning about local cultures through food, neighbourhoods, conversations, and the stories people carry.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Favorites -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Can't pick just one… so here are three</span>
+          <h2>A few of my favorite things</h2>
+          <p>The movies, songs, and books I keep recommending to everyone I know.</p>
+        </div>
+        <div class="favorites-grid">
+          <div class="favorite-card favorite-card--movies reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+              Movies
+            </h3>
+            <ul>
+              <li>Amélie <span class="by">(2001)</span></li>
+              <li>Spider-Man: Into the Spider-Verse <span class="by">(2018)</span></li>
+              <li>The Grand Budapest Hotel <span class="by">(2014)</span></li>
+            </ul>
+          </div>
+
+          <div class="favorite-card favorite-card--songs reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              Songs
+            </h3>
+            <ul>
+              <li>&ldquo;Dreams&rdquo; <span class="by">— Fleetwood Mac</span></li>
+              <li>&ldquo;Golden Hour&rdquo; <span class="by">— Kacey Musgraves</span></li>
+              <li>&ldquo;Redbone&rdquo; <span class="by">— Childish Gambino</span></li>
+            </ul>
+          </div>
+
+          <div class="favorite-card favorite-card--books reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              Books
+            </h3>
+            <ul>
+              <li>The Midnight Library <span class="by">— Matt Haig</span></li>
+              <li>Project Hail Mary <span class="by">— Andy Weir</span></li>
+              <li>Pachinko <span class="by">— Min Jin Lee</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Let's make something friendly together</h2>
+          <p>Whether it's a project, a question, or just a book recommendation — my inbox is always open.</p>
+          <div class="cta-actions">
+            <a class="btn" href="contact.html">
+              Get in Touch
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-outline-light" href="mailto:silvia_yu2003@163.com">
+              Email Me
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container fun-fact">
+      <span class="label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Fun fact about me
+      </span>
+      <p>I can turn a five-minute break into a two-hour rabbit hole, remember oddly specific details, and never say no to trying something delightfully random.</p>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Silvia YU · Made with warmth and lots of coffee.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
